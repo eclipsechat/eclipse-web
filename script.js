@@ -17,7 +17,10 @@ as.forEach(a => {
   a.addEventListener('click', function (e) {
     e.preventDefault(); // prevent the default link behavior
 
-    if (!a.getAttribute('href').startsWith('#')) return; // skip if the link does not lead to a section
+   // skip if the link does not lead to a section
+
+   if (!a.getAttribute('href').startsWith('#')) return;
+
 
     // get target element
     const targetId = a.getAttribute('href').slice(1);
