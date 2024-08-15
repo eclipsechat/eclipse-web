@@ -15,11 +15,13 @@ const as = document.querySelectorAll('a');
 
 as.forEach(a => {
   a.addEventListener('click', function (e) {
-    e.preventDefault(); // prevent the default link behavior
 
+    
    // skip if the link does not lead to a section
 
    if (!a.getAttribute('href').startsWith('#')) return;
+
+    e.preventDefault(); // prevent the default link behavior
 
 
     // get target element
