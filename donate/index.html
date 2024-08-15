@@ -1,8 +1,19 @@
 <h1>Redirecting to my personal BMAC page...</h1>
 <p>It's says 'help me buy a macbook air' but like that would help eclipse too 😭</p>
+<span>Redirecting in ... secs.</span>
 
 <script>
-    setTimeout(function() {
-        window.location.href = "https://buymeacoffee.com/tris_went";
-    }, 4000)
+   // make 5 secs. countdown
+   let countdown = 5;
+   const timerElement = document.querySelector('span');
+   const redirectUrl = 'https://buymeacoffee.com/tris_went';
+   
+   const timer = setInterval(() => {
+      timerElement.textContent = `Redirecting in ${countdown} secs.`;
+      countdown--;
+      if (countdown < 0) {
+         clearInterval(timer);
+         window.location.href = redirectUrl;
+      }
+   }, 1000);
 </script>
