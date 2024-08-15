@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Signup - Eclipse</title>
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <script src="https://kit.fontawesome.com/0aa0770ba0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <ul class="nav login">
+            <div class="beginning">
+                <a href="../" class="logo"><img src="../images/logo-white.png" height="30" /></a>
+             </div>
+        </ul>
+        
+        <div class="hero login">
+            <h1>Create an Account</h1>
+            <form>
+                <label class="error" for="username"></label>
+                <input type="text" id="username" required placeholder="Username">
+                     <label class="error" for="email"></label>
+                    <input type="email" id="email" required placeholder="Email">
+                    <label class="error" for="password"></label>
+                    <input type="password" id="password" required placeholder="Password">
+                    <button class="btn primary rounded sm" type="submit">Signup</button>
+            </form>
+            <p>Already have an account?</p>
+            <button class="btn outline rounded sm" onclick="window.location.assign('../login')">Login</button>
+        </div>
+        <script src="./signup.js"></script>
+    </body>
+</html>

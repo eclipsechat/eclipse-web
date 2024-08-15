@@ -4,7 +4,7 @@
 /* importing fonts 👏👏 */
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 
-/* body, html stuffs */
+/* CATEGORY: body, html stuffs */
 
 *::before, *::after {
     box-sizing: border-box;
@@ -22,7 +22,7 @@ a {
     text-decoration: none;
     color: #fcfcfc;
 }
-/* sidebar */
+/* CATEGORY: sidebar */
 .sidebar {
   display: flex;
   padding: 20px;
@@ -45,7 +45,7 @@ a {
   align-self: stretch;
 }
 
-/* buttons */
+/* CATEGORY: buttons */
 .btn {
   border: none;
   display: flex;
@@ -144,7 +144,7 @@ a {
   }
 
 
-/* NAV BAR!!! */
+/* CATEGORY:NAV BAR!!! */
 
 ul.nav {
   display: flex;
@@ -204,7 +204,7 @@ div.end {
 }
 
 
-/* HERO */
+/* CATEGORY: HERO */
 div.hero {
     display: flex;
     flex-direction: column;
@@ -360,7 +360,7 @@ transform: scale(1.05);
     }
 }
 
-/* Categories (HOMEPAGE) */
+/* CATEGORY: Features */
 .features {
     display: flex;
     flex-direction: column;
@@ -495,7 +495,7 @@ footer.sticky {
     width:100%;
 }
 
-/* special classes */
+/* CATEGORY: special classes */
 
 .flex {
     display:flex;
@@ -520,6 +520,82 @@ footer.sticky {
 .justify-end {
     justify-content: flex-end;
 }
+
+/* CATEGORY: INPUTS */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    display: flex;
+    padding: 12px 24px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+
+    border-radius: 12px;
+border: 2px #fcfcfc;
+
+background: #fcfcfc;
+transition: all 0.2s ease-in-out;
+box-shadow: 0px 2px 6px 0px rgba(212, 210, 224, 0.50), 0px 8px 24px 0px rgba(212, 210, 224, 0.25);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    border: 2px solid #7241FF;
+    outline: none;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover {
+    transform:scale(1.1);
+}
+
+input.error {
+    border: 2px solid #FF7777;
+}
+
+input.error:hover {
+    border: 2px solid #FF7777;
+}
+
+input.success {
+    border: 2px solid #00C3BC;
+}
+
+input.success:hover {
+    border: 2px solid #00C3BC;
+}
+
+label {
+    display:none;
+    align-items: flex-start;
+    text-align:left;
+    gap: 8px;
+    margin-bottom:5px;
+}
+
+label.error {
+    color: #FF7777;
+    font-size: 12px;
+}
+
+/* FORM (LOGIN/SIGNUP) */
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align:center;
+    gap: 20px;
+    padding: 20px 20px;
+    width:50%;
+}
+
+.hero.login {
+    height:100vh;
+    gap:10px;
+}
+
+.hero > p {
+    margin:0;
+}
+
 
 /* any number w (width) class */
 
@@ -549,4 +625,20 @@ footer.sticky {
 
 .gap-30 {
     gap:30px;
+}
+
+@media (max-width: 500px) {
+    form {
+        width:100%;
+    }
+}
+
+.nav.login {
+        position:absolute;
+        background-color: #45237A;
+}
+
+.nav.login .beginning {
+    margin-top:10px;
+    margin-left:5px;
 }
