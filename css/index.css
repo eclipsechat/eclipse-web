@@ -16,6 +16,7 @@ body {
   padding:0;
   font-family: "Instrument Sans";
   max-width:100vw;
+  background-color: #5720ad;
 }
 
 a {
@@ -521,6 +522,11 @@ footer.sticky {
     justify-content: flex-end;
 }
 
+input {
+    font-weight:500;
+    font-family: "Instrument Sans";
+}
+
 /* CATEGORY: INPUTS */
 input[type="text"], input[type="email"], input[type="password"], textarea {
     display: flex;
@@ -588,8 +594,12 @@ form {
 }
 
 .hero.login {
-    height:100vh;
+    position:absolute;
+    right:0;
+    height:calc(100vh - 80px);
+    width:25vw;
     gap:10px;
+    background: #45237A;
 }
 
 .hero > p {
@@ -635,10 +645,25 @@ form {
 
 .nav.login {
         position:absolute;
-        background-color: #45237A;
+        background: none;
+        z-index: 1;
 }
 
 .nav.login .beginning {
     margin-top:10px;
     margin-left:5px;
+}
+
+.top-gradient {
+    height:50vh;
+    width:100vw;
+    z-index:0;
+    position:absolute;
+    background: rgb(252,252,252);
+background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(80,136,255,1) 0%, rgba(112,46,215,1) 100%);
+    --mask: 
+    radial-gradient(20px at 75% 100%,#0000 98%,#000) 50% calc(100% - 20px)/80px 100% repeat-x,
+    radial-gradient(20px at 25% 50%,#000 99%,#0000 101%) bottom/80px 40px repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
