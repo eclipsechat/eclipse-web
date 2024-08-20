@@ -16,7 +16,8 @@ body {
   padding:0;
   font-family: "Instrument Sans";
   max-width:100vw;
-  background-color: #5720ad;
+  background-color: #fcfcfc;
+  overflow:hidden;
 }
 
 a {
@@ -536,7 +537,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
     align-self: stretch;
 
     border-radius: 12px;
-border: 2px #fcfcfc;
+border: 0.2px solid #808080;
 
 background: #fcfcfc;
 transition: all 0.2s ease-in-out;
@@ -548,7 +549,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover {
-    transform:scale(1.1);
+    transform:scale(1.02);
 }
 
 input.error {
@@ -592,14 +593,6 @@ form {
     width:50%;
 }
 
-.hero.login {
-    position:absolute;
-    right:0;
-    height:calc(100vh - 80px);
-    width:25vw;
-    gap:10px;
-    background: #45237A;
-}
 
 .hero > p {
     margin:0;
@@ -622,6 +615,14 @@ form {
 
 .w-75 {
     width:75%;
+}
+
+.gap-5 {
+    gap:5px;
+}
+
+.gap-10 {
+    gap:10px;
 }
 
 .gap-15 {
@@ -654,15 +655,129 @@ form {
 }
 
 .top-gradient {
-    height:50vh;
-    width:100vw;
+    height:100vh;
+    width:50vw;
     z-index:0;
     position:absolute;
+    right:0;
     background: rgb(252,252,252);
 background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(80,136,255,1) 0%, rgba(112,46,215,1) 100%);
-    --mask: 
-    radial-gradient(20px at 75% 100%,#0000 98%,#000) 50% calc(100% - 20px)/80px 100% repeat-x,
-    radial-gradient(20px at 25% 50%,#000 99%,#0000 101%) bottom/80px 40px repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+--mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 52px;
+-webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+
+
+.hero.login {
+/* cosmetics */
+background:none;
+color: #1E0843;
+border:none;
+
+/* layout */
+    width:40vw;
+    height:100vh;
+    max-height:100vh;
+    padding:20px 50px;
+
+    /* display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.hero.login > .login-content > form {
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+    padding:0;
+    margin:0;
+    width:100%;
+}
+
+.hero.login .login-content h1 {
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.hero.login > * {
+    width:100%;
+}
+
+.alr-text {
+    width:100%;
+    text-align:Center;
+}
+
+.hero.login .login-content a {
+    margin-bottom:0;
+}
+.hero.login .login-content h1 {
+    margin-top:0;
+}
+
+.hero.login > .login-content {
+    display:flex;
+    flex-direction: column;
+    gap: 26px;
+    text-align: center;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero.login .login-content h2 {
+    color: #505050;
+    align-self: stretch;
+font-family: "Instrument Sans";
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 80%; /* 18.4px */
+letter-spacing: -0.46px;
+}
+
+.hero.login .login-content button {
+    width:100%;
+}
+
+.alr-text > a {
+    color: #7241FF;
+    
+    transition: color 0.2s ease-in-out;
+}
+
+.alr-text > a:hover {
+    color: #462081;
+    text-decoration: underline;
+}
+
+@media (max-width:800px) {
+    .top-gradient {
+        display:none;
+        width:0%;
+        opacity: 0%;
+    }
+
+    body, html {
+        margin:0;
+        padding:0px;
+        width:100vw;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero.login {
+        width:80vw;
+        max-width:100vw;
+        padding:0px 0px;
+    }
 }

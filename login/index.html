@@ -10,24 +10,23 @@
     <body>
         <div class="top-gradient">
         </div>
-
-        <ul class="nav login">
-            <div class="beginning">
-                <a href="../" class="logo"><img src="../images/logo-white.png" height="30" /></a>
-             </div>
-        </ul>
         
         <div class="hero login">
-            <h1>Login to Eclipse</h1>
+            <div class="login-content">
+            <a href="../" class="logo"><img src="../images/logo.png" height="30" /></a>
+            <div class="flex flex-col gap-5">
+        <h1>Login to Eclipse</h1>
+        <h2>Enter your account details to experience greatness.</h2>
+        </div>
             <form>
                      <label class="error" for="email"></label>
                     <input type="email" id="email" required placeholder="Email">
                     <label class="error" for="password"></label>
                     <input type="password" id="password" required placeholder="Password">
-                    <button class="btn primary rounded sm" type="submit">Login</button>
+                    <button class="btn primary sm" type="submit">Login</button>
             </form>
-            <p>Don't have an account?</p>
-            <button class="btn outline rounded sm" onclick="window.location.assign('../signup')">Sign up</button>
+            <p class="alr-text">Don't have an account? <a href="../signup">Sign up</a></p>
+        </div>
         </div>
         <script src="./login.js"></script>
     </body>
