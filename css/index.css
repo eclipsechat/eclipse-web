@@ -3,6 +3,7 @@
 
 /* importing fonts 👏👏 */
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400..700;1,400..700&display=swap");
 
 /* CATEGORY: body, html stuffs */
 
@@ -666,9 +667,6 @@ form {
     right:0;
     background: rgb(252,252,252);
 background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(80,136,255,1) 0%, rgba(112,46,215,1) 100%);
---mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) 50%/100% 52px;
--webkit-mask: var(--mask);
-        mask: var(--mask);
 }
 
 
