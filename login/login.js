@@ -42,3 +42,34 @@ passwordInput.addEventListener('keyup', function () {
         passwordInput.classList.remove('error');
     }
 });
+
+
+// get css
+const link = "../css/index.css";
+const update = new Date().getTime(); // append timestamp to avoid caching
+const otherLink = "../css/index.css?update=" + update;
+
+// fetch link and get text
+
+fetch(link)
+  .then(response => response.text())
+  .then(cssText => {
+    // fetch otherLink
+    fetch(otherLink)
+     .then(response => response.text())
+     .then(otherCssText => {
+
+      // compare cssText and otherCssText and see if there are any updates
+      if (cssText!== otherCssText) {
+        // add new link to head
+        const newLink = document.createElement('link');
+        newLink.rel ='stylesheet';
+        newLink.type = 'text/css';
+        newLink.href = otherLink;
+        document.head.appendChild(newLink);
+      } else {
+        console.log("No CSS updates detected");
+      }
+
+     });
+  })
